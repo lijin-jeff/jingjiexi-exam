@@ -1,0 +1,409 @@
+{
+  "easycom": {
+    "^tn-(.*)": "@/tuniao-ui/components/tn-$1/tn-$1.vue"
+  },
+  "resizable": true,
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "mp-weixin": {
+          "disableScroll": true
+        },
+        "app-plus": {
+          "bounce": "none"
+        },
+        "mp-alipay": {
+          "allowsBounceVertical": "NO"
+        },
+        "mp-baidu": {
+          "disableScroll": true
+        }
+      }
+    },
+    {
+      "path": "pages/home",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/index/search",
+      "style": {
+        "navigationBarTitleText": "搜索"
+      }
+    }
+  ],
+  "subPackages": [{
+    "root": "subpages/common",
+    "pages": [
+      {
+        "path": "helpContent",
+        "style": {
+          "navigationBarTitleText": "帮助详情"
+        }
+      },
+      {
+        "path": "helpList",
+        "style": {
+          "navigationBarTitleText": "帮助中心"
+        }
+      },
+      {
+        "path": "policyContent",
+        "style": {
+          "navigationBarTitleText": "政策详情"
+        }
+      },
+      {
+        "path": "serviceQrCode",
+        "style": {
+          "navigationBarTitleText": "客服二维码"
+        }
+      },
+      {
+        "path": "update",
+        "style": {
+          "navigationBarTitleText": "版本更新"
+        }
+      }
+    ]
+  }, {
+    "root": "subpages/countdown",
+    "pages": [
+      {
+        "path": "list",
+        "style": {
+          "navigationBarTitleText": "倒计时列表"
+        }
+      },
+      {
+        "path": "followList",
+        "style": {
+          "navigationBarTitleText": "我的倒计时"
+        }
+      },
+      {
+        "path": "detail",
+        "style": {
+          "navigationBarTitleText": "倒计时详情"
+        }
+      }
+    ]
+  }, {
+      "root": "subpages/exam",
+      "pages": [
+        {
+          "path": "questionContent",
+          "style": {
+            "navigationBarTitleText": "题库首页"
+          }
+        },
+        {
+          "path": "questionSetting",
+          "style": {
+            "navigationBarTitleText": "答题设置"
+          }
+        },
+        {
+          "path": "components/commonQuestion",
+          "style": {
+            "navigationBarTitleText": "题目页面"
+          }
+        }
+      ]
+    }, {
+    "root": "subpages/examChapter",
+    "pages": [
+      {
+        "path": "questionChapter",
+        "style": {
+          "navigationBarTitleText": "章节练习"
+        }
+      },
+      {
+        "path": "questionChapterOrder",
+        "style": {
+          "navigationBarTitleText": "章节顺序"
+        }
+      }
+    ]
+  }, {
+    "root": "subpages/examCollection",
+    "pages": [
+      {
+        "path": "questionCollection",
+        "style": {
+          "navigationBarTitleText": "我的收藏"
+        }
+      }
+    ]
+  }, {
+    "root": "subpages/examError",
+    "pages": [
+      {
+        "path": "questionError",
+        "style": {
+          "navigationBarTitleText": "错题本"
+        }
+      }
+    ]
+  }, {
+    "root": "subpages/examHistory",
+    "pages": [
+      {
+        "path": "examinationHistory",
+        "style": {
+          "navigationBarTitleText": "答题历史"
+        }
+      },
+      {
+        "path": "history/analysis",
+        "style": {
+          "navigationBarTitleText": "成绩分析"
+        }
+      },
+      {
+        "path": "history/chart",
+        "style": {
+          "navigationBarTitleText": "图表分析"
+        }
+      }
+    ]
+  }, {
+    "root": "subpages/examMn",
+    "pages": [
+      {
+        "path": "questionMnSetting",
+        "style": {
+          "navigationBarTitleText": "模拟设置"
+        }
+      },
+      {
+        "path": "questionMock",
+        "style": {
+          "navigationBarTitleText": "模拟考试"
+        }
+      }
+    ]
+  }, {
+    "root": "subpages/examOther",
+    "pages": [
+      {
+        "path": "correctionForm",
+        "style": {
+          "navigationBarTitleText": "纠错反馈"
+        }
+      },
+      {
+        "path": "myNoteList",
+        "style": {
+          "navigationBarTitleText": "我的笔记"
+        }
+      },
+      {
+        "path": "noteDetail",
+        "style": {
+          "navigationBarTitleText": "笔记详情"
+        }
+      },
+      {
+        "path": "questionRank",
+        "style": {
+          "navigationBarTitleText": "排行榜"
+        }
+      },
+      {
+        "path": "questionSearch",
+        "style": {
+          "navigationBarTitleText": "题目搜索"
+        }
+      },
+      {
+        "path": "myCorrectionList",
+        "style": {
+          "navigationBarTitleText": "我的纠错"
+        }
+      }
+    ]
+  }, 
+    {
+      "root": "subpages/examEdit",
+      "pages": [
+        {
+          "path": "edit",
+          "style": {
+            "navigationBarTitleText": "试题编辑"
+          }
+        },{
+          "path": "index",
+          "style": {
+            "navigationBarTitleText": "试题列表"
+          }
+        },{
+          "path": "AiEdit",
+          "style": {
+            "navigationBarTitleText": "智能编辑"
+          }
+        }
+      ]
+    },
+  {
+    "root": "subpages/examination",
+    "pages": [
+      {
+        "path": "examinationContent",
+        "style": {
+          "navigationBarTitleText": "考试内容"
+        }
+      },
+      {
+        "path": "examinationQuestion",
+        "style": {
+          "navigationBarTitleText": "考试题目"
+        }
+      },
+      {
+        "path": "examinationQuestionLib",
+        "style": {
+          "navigationBarTitleText": "题库列表"
+        }
+      },
+      {
+        "path": "questionLib",
+        "style": {
+          "navigationBarTitleText": "题库"
+        }
+      },
+      {
+        "path": "questionLibYear",
+        "style": {
+          "navigationBarTitleText": "历年真题"
+        }
+      }
+    ]
+  }, {
+    "root": "subpages/integral",
+    "pages": [
+      {
+        "path": "integralHistory",
+        "style": {
+          "navigationBarTitleText": "积分明细"
+        }
+      },
+      {
+        "path": "ranking",
+        "style": {
+          "navigationBarTitleText": "积分排行"
+        }
+      },
+      {
+        "path": "redeem",
+        "style": {
+          "navigationBarTitleText": "积分兑换"
+        }
+      }
+    ]
+  }, {
+    "root": "subpages/news",
+    "pages": [
+      {
+        "path": "content",
+        "style": {
+          "navigationBarTitleText": "资讯详情"
+        }
+      },
+      {
+        "path": "articleList",
+        "style": {
+          "navigationBarTitleText": "资讯列表"
+        }
+      }
+    ]
+  }, {
+    "root": "subpages/order",
+    "pages": [
+      {
+        "path": "balanceRecharge",
+        "style": {
+          "navigationBarTitleText": "余额充值"
+        }
+      },
+      {
+        "path": "orderEvaluate",
+        "style": {
+          "navigationBarTitleText": "订单评价"
+        }
+      },
+      {
+        "path": "orderList",
+        "style": {
+          "navigationBarTitleText": "订单列表"
+        }
+      }
+    ]
+  }, {
+    "root": "subpages/resource",
+    "pages": [
+      {
+        "path": "content",
+        "style": {
+          "navigationBarTitleText": "资源详情"
+        }
+      },
+      {
+        "path": "resourceList",
+        "style": {
+          "navigationBarTitleText": "资源列表"
+        }
+      }
+    ]
+  }, {
+    "root": "subpages/user",
+    "pages": [
+      {
+        "path": "login",
+        "style": {
+          "navigationBarTitleText": "登录"
+        }
+      },
+      {
+        "path": "member",
+        "style": {
+          "navigationBarTitleText": "会员中心"
+        }
+      },
+      {
+        "path": "message",
+        "style": {
+          "navigationBarTitleText": "消息通知"
+        }
+      },
+      {
+        "path": "set",
+        "style": {
+          "navigationBarTitleText": "设置"
+        }
+      },
+      {
+        "path": "userdata",
+        "style": {
+          "navigationBarTitleText": "个人信息"
+        }
+      }
+    ]
+  }],
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "wifi",
+      "packages": ["subpages/user"]
+    }
+  },
+  "globalStyle": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "精解析答题",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
+}

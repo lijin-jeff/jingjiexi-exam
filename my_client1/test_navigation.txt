@@ -1,0 +1,8 @@
+导航链接修改验证：
+1. questionSetting.vue: 已修改为指向 /subpages/exam/components/commonQuestion
+2. questionError.vue: 已修改为指向 /subpages/exam/components/commonQuestion
+3. questionCollection.vue: 已修改为指向 /subpages/exam/components/commonQuestion
+4. pages.json: 已配置 /subpages/exam/components/commonQuestion 作为页面
+5. 组件版本的 commonQuestion.vue 已具备独立页面功能
+
+修改完成，组件版本的 commonQuestion.vue 现在可以作为独立页面使用。

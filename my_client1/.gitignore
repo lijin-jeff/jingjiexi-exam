@@ -1,0 +1,33 @@
+# Build outputs
+/unpackage/dist/*
+/node_modules/*
+/dist/*
+/build/*
+
+# Editor / IDE
+/.idea/*
+/.vscode/*
+*.swp
+*.swo
+
+# HBuilderX
+.hbuilderx
+
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Package manager
+.npm
+.cache

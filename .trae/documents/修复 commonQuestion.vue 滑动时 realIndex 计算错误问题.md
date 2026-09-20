@@ -1,0 +1,48 @@
+# 问题分析
+
+根据用户提供的截图和代码分析，我发现当从第一题依次向右滑动时，realIndex 计算出现错误：
+- 第一题：activeIndex=0, realIndex=0（正确）
+- 第二题：activeIndex=1, realIndex=1（正确）
+- 第三题：activeIndex=2, realIndex=3（错误，应该是2）
+- 第四题：activeIndex=2, realIndex=4（错误，应该是3）
+- 第五题：activeIndex=2, realIndex=5（错误，应该是4）
+
+# 问题原因
+
+1. **activeQuestions 计算属性逻辑**：当 swiperCurrentIndex=2 时，activeQuestions 返回 [swiperList[1], swiperList[2], swiperList[3]]，所以 activeIndex=2 对应 swiperList[3]，而不是 swiperList[2]
+
+2. **getRealQuestionIndex 方法**：该方法通过 item.uid 在 swiperList 中查找真实索引，但当 activeQuestions 中的题目顺序与 swiperList 不一致时，会导致索引计算错误
+
+3. **滑动处理逻辑**：在 handleSwipeChange 方法中，可能存在索引更新时机的问题
+
+# 修复方案
+
+1. **修改 getRealQuestionIndex 方法**：
+   - 根据当前 swiperCurrentIndex 和 activeIndex 计算真实索引
+   - 考虑 activeQuestions 的长度和当前位置
+
+2. **优化 activeQuestions 计算属性**：
+   - 确保 activeQuestions 中的题目顺序与 swiperList 一致
+   - 优化边界情况的处理
+
+3. **调整滑动处理逻辑**：
+   - 确保索引更新的时机正确
+   - 避免竞态条件
+
+# 具体修改步骤
+
+1. **修改 getRealQuestionIndex 方法**：
+   - 考虑 activeQuestions 的长度和当前位置
+   - 根据 swiperCurrentIndex 计算真实索引
+
+2. **优化 activeQuestions 计算属性**：
+   - 确保返回的题目列表与 swiperList 顺序一致
+   - 优化边界情况的处理
+
+3. **调整 handleSwipeChange 方法**：
+   - 确保索引更新的时机正确
+   - 避免竞态条件
+
+4. **测试验证**：
+   - 从第一题依次向右滑动，验证 realIndex 是否正确显示
+   - 测试边界情况，确保索引计算正确

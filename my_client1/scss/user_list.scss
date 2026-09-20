@@ -1,0 +1,51 @@
+.list-container {
+	height: auto;
+}
+.user-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: scroll;
+	height: auto;
+}
+
+.item {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 20rpx;
+	box-sizing: border-box;
+	border-bottom: 1px solid #f3f3f3;
+
+	.image {
+		width: 100rpx;
+		height: 100rpx;
+		margin-right: 20rpx;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+
+	.text {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.title {
+		font-size: 32rpx;
+		color: #333333;
+		margin-bottom: 10rpx;
+	}
+
+	.subtitle {
+		font-size: 28rpx;
+		color: #666666;
+		margin-bottom: 10rpx;
+	}
+
+	.button {
+		font-size: 28rpx;
+		color: #ff4242;
+	}
+}

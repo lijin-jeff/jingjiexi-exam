@@ -1,0 +1,286 @@
+/**
+ * PC 端响应式样式
+ * 提供 PC 端和移动端的适配样式
+ */
+
+/* ==================== PC 端布局 ==================== */
+
+/* PC 端容器最大宽度 */
+.pc-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40rpx;
+}
+
+/* PC 端卡片样式 */
+.pc-card {
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  margin-bottom: 24rpx;
+}
+
+/* PC 端两栏布局 */
+.pc-two-column {
+  display: flex;
+  flex-direction: row;
+  gap: 32rpx;
+}
+
+.pc-two-column .left-column {
+  flex: 2;
+}
+
+.pc-two-column .right-column {
+  flex: 1;
+}
+
+/* PC 端三栏布局 */
+.pc-three-column {
+  display: flex;
+  flex-direction: row;
+  gap: 24rpx;
+}
+
+.pc-three-column .column {
+  flex: 1;
+}
+
+/* ==================== PC 端特定样式 ==================== */
+
+/* PC 端时隐藏移动端特定元素 */
+.mobile-only {
+  display: block;
+}
+
+.pc-only {
+  display: none;
+}
+
+/* PC 端响应式 */
+@media (min-width: 1024px) {
+  .mobile-only {
+    display: none;
+  }
+  
+  .pc-only {
+    display: block;
+  }
+  
+  /* PC 端列表项悬停效果 */
+  .hover-item:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2rpx);
+    box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* PC 端按钮悬停效果 */
+  .hover-button:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+    transition: all 0.2s ease;
+  }
+  
+  /* PC 端导航栏固定 */
+  .pc-nav-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #fff;
+    box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+  }
+  
+  /* PC 端侧边栏 */
+  .pc-sidebar {
+    position: fixed;
+    top: 120rpx;
+    right: 40rpx;
+    width: 300rpx;
+    max-height: calc(100vh - 160rpx);
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 16rpx;
+    box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.08);
+    padding: 32rpx;
+  }
+}
+
+/* ==================== 横竖屏适配 ==================== */
+
+/* 横屏样式 */
+@media (orientation: landscape) and (max-width: 1024px) {
+  .landscape-hide {
+    display: none;
+  }
+  
+  .landscape-full {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+/* 竖屏样式 */
+@media (orientation: portrait) {
+  .portrait-hide {
+    display: none;
+  }
+}
+
+/* ==================== PC 端题目列表优化 ==================== */
+
+.pc-question-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300rpx, 1fr));
+  gap: 24rpx;
+}
+
+.pc-question-item {
+  border-radius: 12rpx;
+  background-color: #fff;
+  padding: 24rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .pc-question-item:hover {
+    box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.12);
+    transform: translateY(-4rpx);
+  }
+}
+
+/* ==================== PC 端答题界面优化 ==================== */
+
+/* PC 端答题容器 */
+.pc-exam-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40rpx;
+}
+
+/* PC 端题目显示区域 */
+.pc-question-content {
+  background-color: #fff;
+  border-radius: 16rpx;
+  padding: 48rpx;
+  margin-bottom: 32rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.08);
+}
+
+/* PC 端选项布局 */
+.pc-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20rpx;
+}
+
+.pc-option-single {
+  grid-column: span 2;
+}
+
+/* ==================== PC 端统计图表优化 ==================== */
+
+.pc-chart-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400rpx, 1fr));
+  gap: 32rpx;
+  margin-top: 32rpx;
+}
+
+.pc-chart-item {
+  background-color: #fff;
+  border-radius: 16rpx;
+  padding: 32rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.08);
+}
+
+/* ==================== PC 端滚动优化 ==================== */
+
+/* 自定义滚动条（仅 PC 端） */
+@media (min-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+}
+
+/* ==================== PC 端动画优化 ==================== */
+
+/* PC 端减少动画，提升性能 */
+@media (min-width: 1024px) {
+  .smooth-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.4s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20rpx);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ==================== PC 端表单优化 ==================== */
+
+.pc-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40rpx;
+}
+
+.pc-form-item {
+  margin-bottom: 32rpx;
+}
+
+.pc-form-label {
+  display: block;
+  margin-bottom: 12rpx;
+  font-weight: 500;
+  color: #333;
+}
+
+.pc-form-input {
+  width: 100%;
+  padding: 16rpx 20rpx;
+  border: 1px solid #ddd;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  transition: border-color 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .pc-form-input:hover {
+    border-color: #42B476;
+  }
+  
+  .pc-form-input:focus {
+    outline: none;
+    border-color: #42B476;
+    box-shadow: 0 0 0 3px rgba(66, 180, 118, 0.1);
+  }
+}

@@ -1,0 +1,64 @@
+# ========== 额外目录（模板/旧版，不纳入） ==========
+tuniao-ui/
+图鸟UI/
+图鸟模板-圈子/
+my_client/
+.claude/
+
+# ========== 压缩包/临时文件 ==========
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.log
+
+# ========== PHP / server ==========
+server/vendor/
+server/runtime/
+server/public/uploads/
+server/.env
+server/.idea/
+server/public/pc/runtime/
+
+# ========== Vue / Node 通用 ==========
+node_modules/
+dist/
+.env
+.env.local
+.env.*.local
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ========== platform ==========
+platform/dist/
+platform/.env
+
+# ========== tenant ==========
+tenant/dist/
+tenant/.env
+tenant/.env.production
+tenant/.env.development
+
+# ========== my_client1 (uni-app) ==========
+my_client1/dist/
+my_client1/unpackage/
+my_client1/.hbuilderx/
+my_client1/.env
+
+# ========== 系统/IDE ==========
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ========== Composer ==========
+composer.phar
+
+# ========== 根级临时文件 ==========
+debug.log
+dump.txt
